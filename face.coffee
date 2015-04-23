@@ -3,7 +3,7 @@ class FaceShape extends RShape
 	@rname = 'Face generator'
 	# @iconUrl = 'static/icons/inverted/spiral.png'
 	# @iconAlt = 'spiral'
-	@rdescription = "Funny face generator, inspired by weird faces study by Matthias Dörfelt aka mokafolio."
+	@rdescription = "Funny, wierd face generator, inspired by weird faces study by Matthias Dörfelt aka mokafolio."
 
 	@parameters: ()->
 		parameters = super()
