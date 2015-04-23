@@ -26,14 +26,14 @@ class FaceShape extends RShape
 			label: 'Sides'
 			min: 3
 			max: 100
-			default: 50
+			default: 30
 
 		return parameters
 
 	createShape: ()->
 		@headShape = @addPath(new Path.Ellipse(@rectangle.expand(-20,-10)))
 
-		@headShape.flatten(50)
+		@headShape.flatten(30)
 		for segment in @headShape.segments
 			segment.point.x += Math.random()*20
 			segment.point.y += Math.random()*5
