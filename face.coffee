@@ -3,7 +3,7 @@ class FaceShape extends RShape
 	@rname = 'Face generator'
 	# @iconUrl = 'static/icons/inverted/spiral.png'
 	# @iconAlt = 'spiral'
-	@rdescription = "Face generator, inspired by weird faces study by Matthias Dörfelt aka mokafolio."
+	@rdescription = "Funny face generator, inspired by weird faces study by Matthias Dörfelt aka mokafolio."
 
 	@parameters: ()->
 		parameters = super()
@@ -26,14 +26,14 @@ class FaceShape extends RShape
 			label: 'Sides'
 			min: 3
 			max: 100
-			default: 50
+			default: 30
 
 		return parameters
 
 	createShape: ()->
 		@headShape = @addPath(new Path.Ellipse(@rectangle.expand(-20,-10)))
 
-		@headShape.flatten(50)
+		@headShape.flatten(30)
 		for segment in @headShape.segments
 			segment.point.x += Math.random()*20
 			segment.point.y += Math.random()*5
@@ -91,8 +91,8 @@ class FaceShape extends RShape
 		eyeLeft = @addPath(new Path.Ellipse(position, size))
 		position.x += 2*deltaX
 
-		size.width *= 0.5+Math.random()
-		size.height *= 0.5+Math.random()
+		size.width *= 0.75+Math.random()
+		size.height *= 0.75+Math.random()
 		eyeRight = @addPath(new Path.Ellipse(position, size))
 
 		eyeRight.position.x += rangeRandC(0, 5)
