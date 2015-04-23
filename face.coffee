@@ -91,8 +91,8 @@ class FaceShape extends RShape
 		eyeLeft = @addPath(new Path.Ellipse(position, size))
 		position.x += 2*deltaX
 
-		size.width *= 0.5+Math.random()
-		size.height *= 0.5+Math.random()
+		size.width *= 0.75+Math.random()
+		size.height *= 0.75+Math.random()
 		eyeRight = @addPath(new Path.Ellipse(position, size))
 
 		eyeRight.position.x += rangeRandC(0, 5)
